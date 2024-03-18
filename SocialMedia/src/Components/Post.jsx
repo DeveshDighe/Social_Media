@@ -48,7 +48,7 @@ const Post = ({ data, index }) => {
     <div className="card card3  " >
       <div className="card-body fixing addShadow">
         <h5 className="card-title h-25 text-lg font-bold text-gray-700">{data.Title}</h5>
-        <p className="card-text h-50 text-md">{data.PostData}</p>
+        <p className="card-text description text-md">{data.PostData}</p>
         <p className='text-green-600 text-lg'>{data?.likes?.length} Likes</p>
         <div className=' flex justify-around overflow-hidden'>
           <button onClick={() => handleLike()}  className='px-4 py-2 flex items-center rounded-md border  text-slate-600 border-gray-500' >Like</button>

@@ -13,16 +13,16 @@ const SideBar = () => {
         <span className="fs-4">Sidebar</span>
       </a>
       <hr />
-      <ul className="nav nav-pills flex-column mb-auto">
-        <li className="nav-item">
-          <a onClick={() => dispatch({ type: 'SHOW', payload: true })} className={`${state.postClicked ? 'active' : ''} nav-link  text-white flex items-center`} aria-current="page">
-            <svg className="bi pe-none me-2" width="16" height="36"><use xlinkHref="#home"></use></svg>
+      <ul className="nav nav-pills flex-column mb-auto cursor-pointer">
+        <li className="nav-item w-full flex justify-center">
+          <a onClick={() => dispatch({ type: 'SHOW', payload: true })} className={`${state.postClicked ? 'active' : ''} nav-link  text-white flex items-center justify-center w-full`} aria-current="page">
+            {/* <svg className="bi pe-none me-2" width="16" height="36"><use xlinkHref="#home"></use></svg> */}
             Home
           </a>
         </li>
-        <li>
-          <a onClick={() => dispatch({ type: 'CREATE', payload: false })} className={`${state.postClicked ? '' : 'active'} nav-link text-white flex items-center`}>
-            <svg className="bi pe-none me-2" width="16" height="36"><use xlinkHref="#speedometer2"></use></svg>
+        <li className=' w-full'>
+          <a onClick={() => dispatch({ type: 'CREATE', payload: false })} className={`${state.postClicked ? '' : 'active'} nav-link text-white flex items-center justify-center w-full`}>
+            {/* <svg className="bi pe-none me-2" width="16" height="36"><use xlinkHref="#speedometer2"></use></svg> */}
             Create Post
           </a>
         </li>

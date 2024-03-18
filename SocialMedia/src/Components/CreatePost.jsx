@@ -40,7 +40,7 @@ const CreatePost = () => {
 
   return (
     <form onSubmit={handleSubmit} className=' py-8'>
-      <div className=' w-[70%] border border-red-900 m-auto'>
+      <div className=' w-[70%] border rounded-lg border-red-900 m-auto'>
         <div className="mb-3 mt-2">
           <input type="text" className="Title" id="exampleInputEmail1" aria-describedby="emailHelp" value={Title} onChange={(e) => setTitle(e.target.value)} placeholder='Title' maxLength={80} minLength={10} />
         </div>
