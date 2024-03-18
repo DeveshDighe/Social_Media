@@ -29,7 +29,7 @@ const AllPost = ({ searched }) => {
   ]
 
   const data = state?.postData;
-  console.log(data, 'fdafadfsafsafsdfsfsfasdfdfd gagagagaggg');
+  // console.log(data, 'fdafadfsafsafsdfsfsfasdfdfd gagagagaggg');
 
   return (
     <>

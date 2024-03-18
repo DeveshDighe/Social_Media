@@ -8,10 +8,10 @@ function LoginForm() {
     const [registeredUsers, SetregisteredUsers] = useState(null)
 
     let { state, dispatch } = useContext(myContext)
-    console.log(state, '-state');
+    // console.log(state, '-state');
 
     const [Text, SetText] = useState({ email: '', password: '' })
-    console.log(Text);
+    // console.log(Text);
 
     const router = useNavigate();
 
@@ -21,7 +21,7 @@ function LoginForm() {
 
     useEffect(() => {
         SetregisteredUsers(JSON.parse(localStorage.getItem('RegisteredUsers')))
-        console.log(registeredUsers, 'rerererrerer');
+        // console.log(registeredUsers, 'rerererrerer');
     }, [])
 
 
@@ -37,9 +37,9 @@ function LoginForm() {
                 // }
 
                 const isUserExist = registeredUsers.filter((val) => val.email == Text.email)
-                console.log(isUserExist, 'kakakakakakakakakakakakakhahahahahaha');
+                // console.log(isUserExist, 'kakakakakakakakakakakakakhahahahahaha');
                 const user = isUserExist[0]
-                console.log(user, 'NPNPNPNPNPNPNPNPNPNPNPNNP');
+                // console.log(user, 'NPNPNPNPNPNPNPNPNPNPNPNNP');
 
                 if (!user) {
                     return toast.error('User do not exist')
@@ -66,7 +66,7 @@ function LoginForm() {
 
 
             } catch (error) {
-                console.log(error)
+                // console.log(error)
                 toast.error(error.response.data.error)
             }
         }

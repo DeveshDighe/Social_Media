@@ -18,7 +18,7 @@ const SinglePost = () => {
 
   const { id } = useParams()
   let PostId = id
-  console.log(PostId, 'postId');
+  // console.log(PostId, 'postId');
 
   const likesLength = productData.likes ? productData.likes.length : 0;
 
@@ -60,11 +60,11 @@ const SinglePost = () => {
     setindex(indeeexxx)
 
 
-    console.log(index, 'index'); //index not showing here but it updates
+    // console.log(index, 'index'); //index not showing here but it updates
   }, [productData, state.user.email]);
 
   useEffect(() => {
-    console.log(index, 'mainIndex');
+    // console.log(index, 'mainIndex');
   }, [index])
 
 
@@ -74,7 +74,7 @@ const SinglePost = () => {
     let [SingleProduct] = state.postData.filter((data) => {
       return data.id == PostId;
     });
-    console.log(state.postData, 'post');
+    // console.log(state.postData, 'post');
 
 
     setproductData(SingleProduct);

@@ -95,7 +95,7 @@ const SinglePostDummy = () => {
     let [SingleProduct] = dummyDataArr.filter((data) => {
       return data.id == PostId;
     });
-    console.log(state.postData, 'post');
+    // console.log(state.postData, 'post');
 
 
     setproductData(SingleProduct);

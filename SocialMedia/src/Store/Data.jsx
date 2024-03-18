@@ -40,8 +40,8 @@ const reducer = (state, action) => {
       return state
     }
         const postDataCopy = [...state.postData];
-        console.log(postDataCopy, 'llllllllllllllllllllll');
-        console.log(postDataCopy[action.payload.editIndex], '22222222222222222222');
+        // console.log(postDataCopy, 'llllllllllllllllllllll');
+        // console.log(postDataCopy[action.payload.editIndex], '22222222222222222222');
 
         if (!postDataCopy[action.payload.editIndex].likes.includes(action.payload.userLiked)) {
           postDataCopy[action.payload.editIndex] = {
@@ -49,23 +49,23 @@ const reducer = (state, action) => {
             likes: [...postDataCopy[action.payload.editIndex].likes, action.payload.userLiked]
           }
           // toast.success('Liked')
-          console.log('Krishna');
+          // console.log('Krishna');
         }
         else if (action.payload.isliked == true) {
-          console.log('hare ram');
+          // console.log('hare ram');
           let obje = postDataCopy[action.payload.editIndex]
-          console.log(obje, ' obje');
+          // console.log(obje, ' obje');
           obje = {
             ...obje,
             likes: obje.likes.filter(users => users != action.payload.userLiked)
           }
-          console.log(obje, ' obje2');
+          // console.log(obje, ' obje2');
           postDataCopy[action.payload.editIndex] = obje;
           // localStorage.setItem('myPost', JSON.stringify(postDataCopy))
 
         }
 
-        console.log(postDataCopy, 'cpot');
+        // console.log(postDataCopy, 'cpot');
         // state.postData = postDataCopy;
         return { ...state, postData: postDataCopy };
       }
@@ -79,10 +79,10 @@ const reducer = (state, action) => {
     case 'ADDPOST':
       if (action.payload.editIndex != null) {
         const postDataCopy = [...state.postData];
-        console.log(postDataCopy, 'llllllllllllllllllllll');
+        // console.log(postDataCopy, 'llllllllllllllllllllll');
         postDataCopy[action.payload.editIndex] = { ...postDataCopy[action.payload.editIndex], Title: action.payload.Title, PostData: action.payload.PostData, uploaderEmail: action.payload.user.email, likes: [action.payload.PostData.likes] }
 
-        console.log(postDataCopy, 'cpot');
+        // console.log(postDataCopy, 'cpot');
         toast.success('Post Edited')
 
         // state.postData = postDataCopy;
@@ -129,7 +129,7 @@ const Data = ({ children }) => {
     currentUSER();
   }, [])
 
-  console.log(state.user, 'yoyoyoyoyoyoyoyoyyoyo');
+  // console.log(state.user, 'yoyoyoyoyoyoyoyoyyoyo');
   return (
     <myContext.Provider value={{ state, dispatch, setEditPost, setEditTitle, seteditIndex, editIndex, EditTitle, EditPost }}>
       {children}

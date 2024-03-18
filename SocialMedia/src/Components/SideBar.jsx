@@ -4,7 +4,7 @@ import { myContext } from '../Store/Data'
 const SideBar = () => {
 
   const { state, dispatch } = useContext(myContext)
-  console.log(state);
+  // console.log(state);
 
   return (
     <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar w-full gap-y-3">

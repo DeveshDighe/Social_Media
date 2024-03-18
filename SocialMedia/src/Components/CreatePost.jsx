@@ -13,8 +13,8 @@ const CreatePost = () => {
   const [Title, setTitle] = useState(EditTitle || '')
   const [PostData, setPostData] = useState(EditPost || '')
 
-  console.log(state, 'kakakakaka');
-  console.log(state.user, 'hahahahahahah');
+  // console.log(state, 'kakakakaka');
+  // console.log(state.user, 'hahahahahahah');
 
 
 
@@ -33,7 +33,7 @@ const CreatePost = () => {
     }
     dispatch({ type: "ADDPOST", payload: { Title, PostData, editIndex, user: state.user, id: state.postData.length } });
     dispatch({ type: 'SHOW', payload: true })
-    console.log(Title, 'fafafafaf');
+    // console.log(Title, 'fafafafaf');
     setTitle('');
     setPostData('');
   }

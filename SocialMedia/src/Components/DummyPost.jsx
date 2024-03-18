@@ -9,7 +9,7 @@ const DummyPost = ({ data, index }) => {
   const [isliked, setisliked] = useState(false);
   const router = useNavigate();
 
-  console.log(data, 'fdasfdsfsfsdfafassdfs fsdfds fsdf asdfsd fasdf dfData');
+  // console.log(data, 'fdasfdsfsfsdfafassdfs fsdfds fsdf asdfsd fasdf dfData');
 
   // useEffect(() => {
   //   // Check if the current user has already liked the post
@@ -32,15 +32,15 @@ const DummyPost = ({ data, index }) => {
     setisliked((toggle) => !toggle)
   }
 
-  console.log(data.likes.length, 'likes');
-  console.log(isliked);
+  // console.log(data.likes.length, 'likes');
+  // console.log(isliked);
 
 
 
 
 
 
-  console.log(data, 'lalalalala');
+  // console.log(data, 'lalalalala');
   return (
     <div className="card card3   " >
       <div className="card-body fixing addShadow">
