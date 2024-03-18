@@ -36,7 +36,7 @@ const Header = ({ setsearched }) => {
             </ul>
 
 
-            <form className=" flex justify-between sm:mb-4 gap-x-4 mr-10" role="search" onSubmit={handleSubmit} >
+            <form className=" flex justify-between max-sm:mb-4 gap-x-4 mr-10" role="search" onSubmit={handleSubmit} >
               <input type="search" className="form-control form-control-dark text-bg-dark" onChange={(e) => setInnerSearch(e.target.value)} value={InnerSearch} placeholder="Search..." aria-label="Search" />
               <input className=' bg-white py-1 rounded-sm px-3 text-black' type="submit" />
             </form>
