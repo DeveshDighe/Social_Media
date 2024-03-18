@@ -85,7 +85,7 @@ const SinglePost = () => {
 
 
   return (
-    <div className=' h-[100vh] bg-gray-800 text-white flex pt-24 justify-center'>
+    <div className=' h-[1000px] max-sm:h-[2000px] bg-gray-800 text-white flex pt-24 justify-center'>
       <div className=' h-96 w-[45%]'>
         <h2 className=' text-center text-4xl text-yellow-200'>{productData.Title}</h2>
         <p className=' pt-20 text-2xl text-justify leading-10'>{productData.PostData}</p>
